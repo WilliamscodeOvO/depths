@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "为什么信息越多，我们越难形成自己的判断",
@@ -20,9 +21,9 @@ export default function ArticlePage() {
   return (
     <main>
       <header className="site-header shell">
-        <a className="wordmark" href="/" aria-label="深处，返回首页">
-          深处<span>。</span>
-        </a>
+        <Link className="wordmark" href="/" aria-label="深处 Depths，返回首页">
+          深处<span>。</span><span className="wordmark-en">Depths</span>
+        </Link>
         <p className="header-note">关于判断、技术与生活的长文</p>
       </header>
 
@@ -173,9 +174,9 @@ export default function ArticlePage() {
             </section>
 
             <footer className="article-end">
-              <a className="back-link" href="/">
+              <Link className="back-link" href="/">
                 ← 返回全部文章
-              </a>
+              </Link>
             </footer>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const articles = [
   {
     number: "001",
@@ -14,9 +16,9 @@ export default function Home() {
   return (
     <main>
       <header className="site-header shell">
-        <a className="wordmark" href="/" aria-label="深处，返回首页">
-          深处<span>。</span>
-        </a>
+        <Link className="wordmark" href="/" aria-label="深处 Depths，返回首页">
+          深处<span>。</span><span className="wordmark-en">Depths</span>
+        </Link>
         <p className="header-note">关于判断、技术与生活的长文</p>
       </header>
 
@@ -43,7 +45,7 @@ export default function Home() {
         <ol className="article-list">
           {articles.map((article) => (
             <li key={article.number}>
-              <a className="article-link" href={article.href}>
+              <Link className="article-link" href={article.href}>
                 <span className="article-number" aria-hidden="true">
                   {article.number}
                 </span>
@@ -58,7 +60,7 @@ export default function Home() {
                 <span className="article-arrow" aria-hidden="true">
                   ↗
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ol>
