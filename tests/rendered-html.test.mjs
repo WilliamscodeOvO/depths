@@ -10,7 +10,8 @@ test("exports the blog index", async () => {
   assert.match(html, /<html lang="zh-CN">/);
   assert.match(html, /把一个问题想到底/);
   assert.match(html, /为什么信息越多，我们越难形成自己的判断/);
-  assert.match(html, /articles\/judgment-in-the-age-of-information/);
+  assert.match(html, /\/depths\/articles\/judgment-in-the-age-of-information/);
+  assert.match(html, /Depths/);
 });
 
 test("exports the complete example article", async () => {
