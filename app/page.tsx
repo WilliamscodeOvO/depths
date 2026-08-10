@@ -7,8 +7,19 @@ const articles = [
     excerpt:
       "信息没有替我们消除不确定性，只是让逃避决定有了更体面的理由。一次从信息过载向下，直至责任与有限性的追问。",
     date: "2026.08.05",
+    dateTime: "2026-08-05",
     readingTime: "8 分钟",
     href: "/articles/judgment-in-the-age-of-information",
+  },
+  {
+    number: "002",
+    title: "不要让 AI 猜：个人 AI 项目的完整工作流",
+    excerpt:
+      "AI 项目真正的风险不是模型能力不足，而是需求、设计与实现混在一起。一套让 Chat、Work、Codex 与项目文件各司其职的个人开发方法。",
+    date: "2026.08.10",
+    dateTime: "2026-08-10",
+    readingTime: "9 分钟",
+    href: "/articles/personal-ai-project-development-sop",
   },
 ];
 
@@ -54,7 +65,7 @@ export default function Home() {
                   <span className="article-excerpt">{article.excerpt}</span>
                 </span>
                 <span className="article-meta">
-                  <time dateTime="2026-08-05">{article.date}</time>
+                  <time dateTime={article.dateTime}>{article.date}</time>
                   <span>{article.readingTime}</span>
                 </span>
                 <span className="article-arrow" aria-hidden="true">
